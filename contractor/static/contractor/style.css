@@ -1,0 +1,38 @@
+
+.navbar  {
+    background-color: rgb(76,76,76);
+
+
+
+}
+
+ul{
+    list-style-type:none;
+
+}
+ul li {
+    display:inline;
+}
+ul.navbar-nav li.nav-item a.nav-link{
+    color:rgb(255,255,255);
+}
+
+ul.navbar-nav li.nav-item.active a.nav-link{
+    color:rgb(255,215,0);
+}
+
+
+a.navbar-brand img {
+    padding:0;
+    width:300px;
+    height:50px;
+
+    border-radius:2%;
+
+}
+ #mainLogo{
+    position:relative;
+    left:33%;
+    margin-top:20px;
+
+}

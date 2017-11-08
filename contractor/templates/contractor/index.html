@@ -1,0 +1,11 @@
+{% extends 'contractor/base.html' %}
+{% block body %}
+
+<ul>
+        {% for workers in object_list %}
+            <li><a href="{% url 'contractor:detail' workers.id %}">{{workers.workName }}</a> </li>
+            <li><img src="{{ workers.workPic }}"</li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,9 @@
+    {% for workers in work.worker_set.all %}
+<ul>
+    <li><img id="pic" src="{{ workers.workerPic }}"style="width:300px;"></li>
+    <li>{{ workers.workerName }}</li><br>
+    <li> {{ workers.hourlyRate }}</li><br>
+    <li>{{ workers.aboutWorker }}</li><br>
+
+</ul>
+    {% endfor %}
