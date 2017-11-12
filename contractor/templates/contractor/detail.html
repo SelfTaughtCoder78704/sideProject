@@ -1,3 +1,6 @@
+{% extends 'contractor/base.html' %}
+{% block body %}
+
     {% for workers in work.worker_set.all %}
 <ul>
     <li><img id="pic" src="{{ workers.workerPic }}"style="width:300px;"></li>
@@ -7,3 +10,4 @@
 
 </ul>
     {% endfor %}
+{% endblock %}

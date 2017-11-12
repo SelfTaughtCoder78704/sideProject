@@ -1,0 +1,18 @@
+{% extends 'contractor/base.html' %}
+<title>{% block title %}Profile{% endblock %}</title>
+{% block body %}
+<div class="container" style="background-color:gold;padding:5px;border:2px solid black;">
+    <h2>Profile</h2>
+    <p>
+       First Name: {{ user.first_name }}<br>
+        Last Name: {{ user.last_name }}<br>
+        Email Address: {{ user.email }}
+    </p>
+<a href='/contractor/profile/edit/'>Edit Profile</a><br>
+    <a href='/contractor/reset-password/'>Lost Or Don't Remember Password?</a>
+</div>
+
+
+{% endblock %}
+
+

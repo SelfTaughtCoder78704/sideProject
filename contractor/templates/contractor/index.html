@@ -1,7 +1,7 @@
 {% extends 'contractor/base.html' %}
 {% block body %}
 
-<ul>
+<ul style="background-color:gold;padding:5px; border:2px solid black;margin:5px;">
         {% for workers in object_list %}
             <li><a href="{% url 'contractor:detail' workers.id %}">{{workers.workName }}</a> </li>
             <li><img src="{{ workers.workPic }}"</li>

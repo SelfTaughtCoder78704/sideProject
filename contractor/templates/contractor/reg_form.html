@@ -1,0 +1,12 @@
+{% extends 'contractor/base.html' %}
+{% block body %}
+<div class="container">
+    <h3>Register</h3>
+<form method="post" style="background-color:gold;padding:5px;border:2px solid black;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+</div>
+
+{% endblock %}

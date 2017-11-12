@@ -1,0 +1,13 @@
+{% extends 'contractor/base.html' %}
+<title>{% block title %}Edit Profile{% endblock %}</title>
+{% block body %}
+<div class="container">
+    <form method="post"style="background-color:gold; padding:5px;border:2px solid black;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}
