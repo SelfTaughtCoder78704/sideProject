@@ -1,0 +1,25 @@
+{% extends 'contractor/base.html' %}
+
+<title>{% block title %}HowItWorks{% endblock %}</title>
+
+{% block body %}
+
+<h2 id="How" style="font-size:40px;text-align:center; font-style:italic;text-shadow:3px 6px 6px gold;">How It Works</h2>
+<div class="container" style="border: 2px solid black;background-color:gold;padding:10px;height:400px; width:1300px;">
+    <div style="float:left;margin:10px;">
+        <h3 style="text-align:center;"><strong>Contractors</strong></h3>
+        <p style="font-size:25px;">Contractors sign up for an account and post<br> their hourly wage.</p>
+        <a href="/contractor/register/">Sign Up Now!</a>
+    </div>
+    <div style="float:right;margin:10px;">
+        <h3 style="text-align:center;"><strong>Contractees</strong></h3>
+        <p style="font-size:25px;">Those who are interested in hiring an hourly contractor, sign up<br>
+    and choose a contractor. Select HireNow, and we'll do the rest!</p>
+        <a href="/contractor/">Check Out Some Contractors!</a>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
