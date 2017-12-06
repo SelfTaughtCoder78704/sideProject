@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth.views import password_reset, password_reset_confirm
-
 from django.views import generic
 from contractor.forms import (
     RegistrationForm,
@@ -36,7 +35,7 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/contractor/')
+            return redirect(reverse('contractor:login'))
     else:
         form = RegistrationForm()
 
@@ -57,7 +56,7 @@ def edit_profile(request):
 
         if form.is_valid():
             form.save()
-            return redirect(reverse('contractor:view_profile'))
+            return redirect(reverse('contractor:profile'))
     else:
         form = EditProfileForm(instance=request.user)
         args = {'form':form }

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'ContractPaySite.middleware.LoginRequiredMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'ContractPaySite.middleware.LoginRequiredMiddleware',
+
 ]
 
 ROOT_URLCONF = 'ContractPaySite.urls'
@@ -121,13 +123,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'ContractPaySite/media')
+
+
 LOGIN_REDIRECT_URL = '/contractor/'
 LOGIN_URL = '/contractor/login/'
 LOGIN_EXEMPT_URLS = (
-
+    #r'^contractor/$',
     r'^contractor/logout/$',
     r'^contractor/register/$',
     r'^contractor/how/$',
+    r'^contractor/reset-password/$',
+    r'^contractor/reset-password/done/$',
+    r'^contractor/reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+
+    r'^contractor/reset-password/complete/$',
 
 
 )

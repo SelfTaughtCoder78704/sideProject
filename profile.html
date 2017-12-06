@@ -1,0 +1,22 @@
+{% extends 'contractor/base.html' %}
+<title>{% block title %}Profile{% endblock %}</title>
+{% block body %}
+<div class="container" style="background-color:gold;padding:5px;border:2px solid black;width:800px;">
+    <h2 style="text-align:center;">Profile for {{ user.username }}</h2>
+    <p style="text-align:center;">
+       First Name: {{ user.first_name }}<br>
+        Last Name: {{ user.last_name }}<br>
+        Email Address: {{ user.email }}
+    </p>
+    <p style="text-align:center;">City: {{ user.userprofile.city }}</p>
+    <p style="text-align:center;">Category of Work: {{ user.userprofile.workCategory }}</p>
+    <img src='{{ user.userprofile.image.url }}'width="300px" style="margin-left:33%;border:2px solid black;">
+    <a href="{% url 'contractor:edit_profile' %}" style="margin-left:90%;">Edit Profile</a><br>
+    <a href="{% url 'contractor:logout' %}" style="margin-left:90%;position:relative;">LogOut</a>
+   <!-- <a href="{% url 'contractor:reset_password' %}">Lost Or Don't Remember Password?</a> No Longer Needed-->
+</div>
+
+
+{% endblock %}
+
+
